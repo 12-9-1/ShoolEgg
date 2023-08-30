@@ -1,0 +1,69 @@
+//10. Dada una matriz de orden n * m (donde n y m son valores ingresados por el usuario) realizar
+//un subprograma que llene la matriz de numeros aleatorios. Despues, crearemos otro
+//subprograma que calcule y muestre la suma de los elementos de la matriz. Mostrar la matriz y
+//los resultados por pantalla.
+
+Algoritmo Ejer10x
+	
+	Definir matriz, f, c, acu, i, j Como Entero
+	acu = 0
+	Escribir "Ingrese la cantidad de filas"
+	leer f
+	
+	Escribir "Ingrese la cantidad de columnas"
+	leer c
+	
+	Dimension matriz[f,c]
+	
+	llenar(matriz,f,c)
+	
+	suma(matriz,f,c,acu)
+	
+	para i <- 0 Hasta f-1 Hacer
+		
+		para j <- 0 Hasta c-1 Hacer
+			
+			si j = c-1 Entonces
+				Escribir matriz[i,j]
+			SiNo
+				Escribir matriz[i,j] ", " Sin Saltar
+			FinSi
+			
+		FinPara
+		
+	FinPara
+	
+	Escribir "la suma de todos sus elementos es: " acu
+	
+FinAlgoritmo
+
+
+SubProceso llenar(matriz Por Referencia,f,c)
+	Definir i, j Como Entero
+	
+	para i <- 0 Hasta f-1 Hacer
+		
+		para j <- 0 Hasta c-1 Hacer
+			
+			matriz[i,j] = Aleatorio(1,9)
+			
+		FinPara
+		
+	FinPara
+	
+FinSubProceso	
+
+SubProceso suma(matriz,f,c,acu Por Referencia)
+	Definir i, j Como Entero
+	
+	para i <- 0 Hasta f-1 Hacer
+		
+		para j <- 0 Hasta c-1 Hacer
+			
+			acu = acu + matriz[i,j]
+			
+		FinPara
+		
+	FinPara
+	
+FinSubProceso

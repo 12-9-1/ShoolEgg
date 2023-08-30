@@ -1,0 +1,80 @@
+//Realizar un programa con el siguiente menú y le pregunte al usuario que quiere hacer hasta
+//que ingrese la opción Salir:
+//	A. Llenar Vector A. Este vector es de tamaño N y se debe llenar de manera aleatoria
+//	usando la función Aleatorio(valorMin, valorMax) de PseInt.
+//	B. Llenar Vector B. Este vector también es de tamaño N y se llena de manera aleatoria.
+//	C. Llenar Vector C con la suma de los vectores A y B. La suma se debe realizar elemento
+//  a elemento. Ejemplo: C = A + B
+//	D. Llenar Vector C con la resta de los vectores B y A. La resta se debe realizar elemento a
+//  elemento. Ejemplo: C = B - A
+//  E. Mostrar. Esta opción debe permitir al usuario decidir qué vector quiere mostrar: Vector
+//	A, B, o C.
+//	F. Salir.
+//NOTA: El rango de los números aleatorios para los Vectores será de [-100 a 100]. La longitud
+//para todos los vectores debe ser la misma, por lo tanto, esa información sólo se solicitará una
+//vez.
+
+Algoritmo menu_vectores
+	Definir vecA, vecB, vecC, r, i, op2 Como Entero
+	Definir op Como Caracter
+	Escribir "Ingrese el tamaño de los vectores"
+	Leer r
+	Dimension vecA(r), vecB(r), vecC(r)
+	Repetir
+		Escribir "A. LLenar Vector A."
+		Escribir "B. Llenar Vector B."
+		Escribir "C. Llenar Vector C con suma de A y B."
+		Escribir "D. Llenar Vector C con resta de A y B."
+		Escribir "E. Mostrar vector."
+		Escribir "F. Salir."
+		Leer op
+		Segun Mayusculas(op) Hacer
+			"A":
+				rellenarVec(vecA, r)
+			"B":
+				rellenarVec(vecB, r)
+			"C":
+				Para i<-0 Hasta r-1 Hacer
+					vecC(i)=vecA(i)+vecB(i)
+				FinPara
+				Escribir "La suma se realizó"
+			"D":
+				Para i<-0 Hasta r-1 Hacer
+					vecC(i)=vecB(i)-vecA(i)
+				FinPara
+				Escribir "La resta se realizó"
+			"E":
+				Escribir "Elija 1 si quiere imprimir el vector A"
+				Escribir "Elija 2 si quiere imprimir el vector B"
+				Escribir "Elija 3 si quiere imprimir el vector C"
+				Leer op2
+				Segun op2 Hacer
+					1:
+						imprimirVec(vecA, r)
+					2:
+						imprimirVec(vecB, r)
+					3:
+						imprimirVec(vecC, r)
+				FinSegun
+			"F":
+				Escribir "Chau."
+		Fin Segun
+	Mientras Que Mayusculas(op)<>"F"
+FinAlgoritmo
+
+SubProceso rellenarVec(vec Por Referencia, r Por Referencia)
+	Definir i Como Entero
+	Para i<-0 Hasta r-1 Con Paso 1 Hacer
+		vec(i)=Aleatorio(-100, 100)
+	FinPara
+	Escribir "El vector se rellenó"
+FinSubProceso
+
+SubProceso imprimirVec(vec Por Referencia, r Por Referencia)
+	Definir i Como Entero
+	Para i<-0 Hasta r-1 Hacer
+		Escribir Sin Saltar vec(i) ", "
+		Escribir ""
+	FinPara	
+FinSubProceso
+	

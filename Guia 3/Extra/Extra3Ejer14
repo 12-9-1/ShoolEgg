@@ -1,0 +1,73 @@
+//14. Diseñar un procedimiento que reciba una frase, y el programa remueva todas las vocales
+//repetidas. Al final el procedimiento mostrará la frase final.
+
+
+SubProceso remov(frase Por Referencia)
+	Definir i,contA,contE,contI,contO,contU Como Entero
+	Definir letra Como Caracter
+	contA=0
+	contE=0
+	contI=0
+	contO=0
+	contU=0
+	
+	para i <- 0 hasta Longitud(frase) Hacer
+		letra = Subcadena(frase, i, i )
+		letra = Minusculas(letra)
+		
+		Segun letra hacer
+			"a":
+				contA = contA + 1
+			"e":
+				contE = contE + 1
+			"i":
+				contI = contI + 1
+			"o":
+				contO = contO + 1
+			"u":
+				contU = contU + 1
+		FinSegun
+	FinPara
+	
+	para i <- 0 Hasta Longitud(frase) Hacer
+		
+		letra = Subcadena(frase, i, i )
+		letra = Minusculas(letra)
+		
+		segun letra hacer
+			"a":
+				si contA > 1 Entonces
+					letra = ""
+				FinSi
+			"e":
+				si contE > 1 Entonces
+					letra = ""
+				FinSi
+			"i":
+				si contI > 1 Entonces
+					letra = ""
+				FinSi
+			"o":
+				si contO > 1 Entonces
+					letra = ""
+				FinSi
+			"u":
+				si contU > 1 Entonces
+					letra = ""
+				FinSi
+		FinSegun
+		Escribir Sin Saltar letra
+	FinPara
+	Escribir ""
+FinSubProceso
+
+
+Algoritmo EjerExtra14
+	Definir frase Como Caracter
+	
+	Escribir "Ingrese una frase"
+	leer frase
+	
+	remov(frase)
+	
+FinAlgoritmo

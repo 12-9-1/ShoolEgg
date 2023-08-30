@@ -1,0 +1,53 @@
+Algoritmo codificarfrase
+	Definir frase, letra1 Como Caracter
+	letra1=""
+	Escribir "Igrese una frase"
+	leer frase
+	reemplazarVocales(frase)
+	Escribir ""
+	Escribir "Frase codificada"
+	Escribir "----------------"
+	escribir frase
+FinAlgoritmo
+
+SubProceso reemplazarVocales(text Por Referencia)
+	Definir i Como Entero
+	definir text1, text2, letra, letra2 Como Caracter
+	text1=""
+	text2=""
+	i=0
+	repetir
+		letra2=Subcadena(text,i,i)
+			text1=Concatenar(text1, letra2)
+			i=i+1
+	 mientras que letra2<>"." 
+
+	Para i=0 hasta Longitud(text1)-1 Hacer
+		letra = Subcadena(text1,i,i)		
+		segun  letra hacer
+			"a":
+				letra = "@"
+				text2=Concatenar(text2, letra)
+			"e" :
+				letra = "#"
+				text2=Concatenar(text2, letra)
+			"i":
+				letra = "$"
+				text2=Concatenar(text2, letra)
+			"o":
+				letra = "%"
+				text2=Concatenar(text2, letra)
+			"u":
+				letra = "*"
+				text2=Concatenar(text2, letra)
+				
+				De Otro Modo
+				text2=Concatenar(text2, letra)
+				
+			
+		FinSegun
+		
+	FinPara
+	text=text2
+FinSubProceso
+	

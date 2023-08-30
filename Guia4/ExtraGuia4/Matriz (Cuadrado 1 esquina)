@@ -1,0 +1,60 @@
+//   Realizar un programa que cree una matriz de 5x15 y deberemos llenar la matriz de unos y
+//    ceros. Llenando el marco o la delimitación externa de la matriz de unos y la parte interna de
+//     ceros.
+
+//   Por ejemplo, nuestro matriz final debería verse así:
+
+//	111111111111111
+//	100000000000001
+//	100000000000001
+//	100000000000001
+//	111111111111111
+
+
+
+
+Algoritmo sin_titulo
+	
+	definir matriz, i, f, otri Como Entero
+	dimension matriz(5,15)
+	
+	para i <- 0 hasta 4 Hacer
+		
+		para f <- 0 hasta 14 Hacer 
+			si i = 0 o i = 4 entonces
+				matriz(i,f) = 1
+				
+			sino 
+				matriz(i,f) = 0
+				
+			FinSi
+			si f = 0 o f = 14 entonces
+				matriz(i,f) = 1
+			FinSi
+			
+		FinPara
+		
+	FinPara
+	
+	para i <- 0 hasta 4 Hacer
+		
+		para f <- 0 hasta 14 Hacer
+			escribir matriz(i,f) Sin Saltar
+		FinPara
+		
+		escribir ""
+		
+	FinPara
+	
+	
+	
+	
+	
+	
+FinAlgoritmo
+
+
+
+
+
+

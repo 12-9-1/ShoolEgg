@@ -1,0 +1,13 @@
+Algoritmo ejercicio_5_extra
+	Definir precio1, precio2 Como Entero
+	Escribir  "Ingrese el precio de pricipio de año"
+	Leer precio1
+	Escribir  "Ingrese el precio de fin de año"
+	Leer precio2
+	
+	Definir porcentaje Como Real
+	porcentaje = (precio2/precio1)*100-100
+	
+	Escribir "El aumento fue de ; ",  porcentaje "%"
+	
+FinAlgoritmo

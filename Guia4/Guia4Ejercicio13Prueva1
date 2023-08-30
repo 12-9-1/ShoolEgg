@@ -1,0 +1,96 @@
+//13. Una matriz mágica es una matriz cuadrada (tiene igual número de filas que de columnas) que
+//tiene como propiedad especial que la suma de las filas, las columnas y las diagonales es igual.
+//Por ejemplo:
+//	2 7 6
+//	9 5 1
+//	4 3 8
+//	En la matriz de ejemplo las sumas son siempre 15. Considere el problema de construir un
+//	algoritmo que compruebe si una matriz de datos enteros es mágica o no, y en caso de que
+//			sea mágica escribir la suma. Además, el programa deberá comprobar que los números
+//			introducidos son correctos, es decir, están entre el 1 y el 9. El usuario ingresa el tamaño de la
+//			matriz que no debe superar orden igual a 10.
+
+Algoritmo Ejer13x
+	
+	Definir matriz, n, i, j, fila, columna, dp, ds, cont, acu Como Entero
+	Definir magica Como Logico
+	fila = 0
+	columna = 0
+	dp = 0
+	ds = 0
+	magica = Falso
+	
+	cont = 0
+	
+	Escribir "Ingrese la dimension de la matriz cuadrada"
+	leer n
+	
+	Dimension matriz[n,n]
+	/// diagonal
+	para i <- 0 Hasta n-1 Hacer
+		para j <- 0 Hasta n-1 Hacer
+			
+			matriz[i,j] = Aleatorio(1,9)
+			si i=j Entonces
+				dp = dp + matriz[i,j]
+			FinSi
+			si (i+j) = n-1 Entonces
+				ds = ds + matriz[i,j]
+			FinSi
+			
+		FinPara
+	FinPara
+	
+	magica = dp = ds
+	/// filas
+	si magica = Verdadero Entonces
+		
+		para i <- 0 Hasta n-1 Hacer
+			acu = 0
+			para j <- 0 Hasta n-1 Hacer
+				acu = acu + matriz[i,j]
+				si j = n-1 Entonces
+					si acu = dp Entonces
+						cont = cont + 1
+					FinSi
+				FinSi
+			FinPara
+		FinPara
+		
+	FinSi
+	
+	cont = 0
+	/// columna
+	si magica = Verdadero Entonces
+		
+		para i <- 0 Hasta n-1 Hacer
+			acu = 0
+			para j <- 0 Hasta n-1 Hacer
+				acu = acu + matriz[j,i]
+				si j = n-1 Entonces
+					si acu = dp Entonces
+						cont = cont + 1
+					FinSi
+				FinSi
+			FinPara
+		FinPara
+		
+	FinSi
+	
+	magica = cont = n
+	
+	Escribir magica
+	
+	para i <- 0 Hasta n-1 Hacer
+		para j <- 0 Hasta n-1 Hacer
+			
+			si j = n-1 Entonces
+				Escribir matriz[i,j]
+			SiNo
+				Escribir matriz[i,j] ", " Sin Saltar
+			FinSi
+			
+		FinPara
+	FinPara
+	
+FinAlgoritmo

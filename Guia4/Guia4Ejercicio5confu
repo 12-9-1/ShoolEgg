@@ -1,0 +1,39 @@
+
+Algoritmo Guia4ej5
+//	Realizar un programa que rellene un vector de tamaño N, con valores ingresados por el
+//	usuario. A continuación, se deberá crear una función que reciba el vector y devuelva el valor
+//	más grande del vector.
+	
+Definir n,vector,i como entero 	
+Escribir "seleccione la cantidad de numeros que desea ingresar:"
+leer n
+Dimension  vector(n)
+Escribir "Ingrese ",n " valores: "
+
+para i=0 Hasta n-1 Hacer
+	leer vector(i)
+FinPara
+
+
+Escribir "El valor maximo ingresado es:",Calcularvalor(vector,n)
+
+FinAlgoritmo
+
+Funcion valormax <- Calcularvalor(vector,n)
+	Definir valormax, i Como Entero
+	valormax=0
+	
+	para i=0 Hasta n-1 Hacer
+		si valormax<vector(i) Entonces
+			valormax=vector(i)
+		FinSi
+		
+	FinPara
+	
+	
+Fin Funcion
+
+
+	
+	
+

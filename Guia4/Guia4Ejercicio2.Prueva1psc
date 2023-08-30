@@ -1,0 +1,28 @@
+Algoritmo ejercicio2_guia4
+	Definir v, i, suma, resta, multiplicacion Como Real
+	Dimension v[10]
+	
+	Escribir "ingrese 10 valores reales"
+	
+	Para i = 0 Hasta 0 Con Paso 1 Hacer
+		
+		Leer v[0]
+		Leer v[1]
+		Leer v[2]
+		Leer v[3]
+		Leer v[4]
+		Leer v[5]
+		Leer v[6]
+		Leer v[7]
+		Leer v[8]
+		Leer v[9]
+		
+		suma=0
+		resta=0
+		multiplicacion=0
+		Escribir "la suma de todo es: " V(0)+V(1)+V(2)+V(3)+V(4)+V(5)+V(6)+V(7)+V(8)+V(9)
+		Escribir "la resta de todo es: " V(0)-V(1)-V(2)-V(3)-V(4)-V(5)-V(6)-V(7)-V(8)-V(9)
+		Escribir "la multiplicacion de todo es: " V(0)*V(1)*V(2)*V(3)*V(4)*V(5)*V(6)*V(7)*V(8)*V(9)
+	FinPara
+	Escribir "eso es todo, muchas gracias compa"
+FinAlgoritmo

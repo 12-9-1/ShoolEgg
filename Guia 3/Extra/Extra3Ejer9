@@ -1,0 +1,60 @@
+//9. El número de combinaciones de m elementos tomados de n es:
+//	(
+//	   m		 m!
+//	(----) = (----------)
+//	   n	   n!(m-n)!
+//	
+//	
+//	Diseñar una función que permita calcular el número combinatorio de 
+//(	m
+// 	-
+//	n)
+//	
+//Nota: n debe ser mayor a 0 y menor que m.
+//	
+
+Funcion r <- f(m,n)
+	Definir acuM, acuN, acuMN, r, i Como Entero
+	
+	acuM= 1
+	acuN= 1
+	acuMN= 1
+	
+	para i <- 1 Hasta m Con Paso 1 Hacer
+		acuM = acuM * (i)
+	FinPara
+	Escribir acuM
+	
+	para i <- 1 Hasta n Con Paso 1 Hacer
+		acuN = acuN * (i)
+	FinPara
+	Escribir acuN
+	
+	para i <- 1 Hasta (m-n) Con Paso 1 Hacer
+		acuMN = acuMN * (i)
+	FinPara
+	Escribir acuMN
+	
+	r = (acuM)/(acuN * acuMN)
+	
+FinFuncion
+
+
+Algoritmo EjerExtra9
+	
+	Definir m, n Como real
+	
+	Escribir "Ingrese la combinación de elementos: (ingrese el número de combinación)"
+	leer m
+	
+	Escribir "Tomados de: (Ingrese el número con el que se va tomar)"
+	leer n
+	
+	Mientras n = 0 o n > m  Hacer
+		Escribir "Error, El número con el que se toma a los elementos es incorrecto, ingrese otro"
+		leer n
+	FinMientras
+	
+	Escribir f(m,n)
+	
+FinAlgoritmo

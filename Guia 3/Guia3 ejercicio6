@@ -1,0 +1,23 @@
+
+Algoritmo Subnoseque
+	
+//	Realizar un procedimiento que permita intercambiar el valor de dos variables de tipo entero.
+	//	La variable A, debe terminar con el valor de la variable B.
+	
+///funcion tiene una funcion o uso especifico y subproceso (gracias) agarra lo que tienes y hace lo q
+	///pidas.
+	
+	definir num1 , num2 como entero	
+	escribir "ingrese un par de numeros, los dislexificare"
+	leer num1 , num2 
+ pepa(num1 , num2)	
+FinAlgoritmo
+
+
+subproceso pepa( num1 por valor, num2 por valor ) 
+	definir num3 como entero 	
+	num3 = num1
+	num1 = num2
+	num2 = num3
+	escribir num1 ", " num2
+FinSubProceso

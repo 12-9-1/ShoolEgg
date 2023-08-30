@@ -1,0 +1,88 @@
+Algoritmo eje_13
+	definir vector,matriz,f,c,j,n,suma1, suma2, suma3, suma4,i,h,g Como Entero
+	Definir iguales como logico
+	suma1=0
+	suma2=0
+	suma3=0
+	suma4=0
+	i=0
+	h=0
+	g=1
+	Repetir
+		Escribir "Ingrese la dimension de la matriz"
+		leer n
+	Mientras Que n>10 o n<2
+	Dimension vector(n*2+2)
+	Dimension matriz(n,n)
+	Para f=0 hasta n-1 Hacer
+		para c=0 hasta n-1 Hacer
+			Escribir "Ingrese un número entre 1 y 9"
+			leer j
+			Mientras j<1 y j>9
+				Escribir "ERROR: Ingrese un numero nuevo"
+				leer j
+			FinMientras
+			matriz(f,c)=j
+		FinPara
+	FinPara
+	Para f=0 hasta n-1 Hacer
+		para c=0 hasta n-1 Hacer
+			Escribir matriz(f,c) " " Sin Saltar 
+		FinPara
+		Escribir ""
+	FinPara 
+	
+	IsMagic(matriz,f,c,j,n,suma1, suma2, suma3, suma4,vector,i,h,g,iguales)
+	Escribir iguales
+FinAlgoritmo
+
+SubProceso IsMagic(matriz,f,c,j,n,suma1 Por Referencia, suma2 Por Referencia, suma3 Por Referencia, suma4 Por Referencia,vector,i,h,g,iguales Por Referencia)
+	para f=0 hasta n-1 Hacer
+		para c=0 hasta n-1 Hacer
+			suma1=suma1+matriz(f,c)
+		FinPara
+		vector(i)=suma1
+		suma1=0
+		i=i+1
+		
+	FinPara
+	
+	para c=0 hasta n-1 Hacer
+		para f=0 hasta n-1 Hacer
+			suma2=suma2+matriz(f,c)
+		FinPara
+		vector(i)=suma2
+		suma2=0
+		i=i+1
+		
+	FinPara
+	
+	para f=0 hasta n-1 Hacer
+		para c=0 hasta n-1 Hacer
+			si f=c Entonces
+				suma3=suma3+matriz(f,c)
+			FinSi
+		FinPara
+		vector(i)=suma3
+		suma3=0
+	FinPara
+	i=i+1
+	
+	para f=(n-1) hasta 0 con paso -1 Hacer
+		para c=(n-1) hasta 0 con paso -1 Hacer
+			si f=c Entonces
+				suma4=suma4+matriz(f,c)
+			FinSi
+		FinPara
+		vector(i)=suma4
+		suma4=0
+	FinPara
+	
+	Repetir
+		iguales=vector(h)==vector(g)
+		h=h+1
+		g=g+1
+	Mientras Que iguales=verdadero y h>i y g>i 
+	
+
+FinSubProceso

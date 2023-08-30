@@ -1,0 +1,33 @@
+//2. Escriba un programa que solicite dos números enteros (mínimo y máximo). A continuación,
+//se debe pedir al usuario que ingrese números enteros situados entre el máximo y mínimo.
+//Cada vez que un número se encuentre entre ese intervalo, se sumara uno a una variable.
+//El programa terminará cuando se escriba un número que no pertenezca a ese intervalo, y
+//al finalizar se debe mostrar por pantalla la cantidad de números ingresados dentro del
+//intervalo.
+
+Algoritmo ejerExtra2prueba
+	
+	Definir max, min, num, cont Como Entero
+	
+	Escribir "Ingrese el limite minimo"
+	leer min
+	
+	Escribir "Ingrese el limite maximo"
+	leer max
+	
+	Escribir "Ingrese otro número dentro de los limites"
+	leer num
+	
+	cont = 0
+	
+	Mientras num >= min y num <= max Hacer
+		
+		Escribir "Ingrese otro número dentro de los limites"
+		leer num
+		cont = cont + 1
+		
+	FinMientras
+	
+	Escribir "La cantidad de números tipeados dentro del limite es de: " cont
+	
+FinAlgoritmo

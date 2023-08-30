@@ -1,0 +1,50 @@
+Algoritmo FuncionnNose
+	
+	//	Realizar un programa que pida al usuario una frase y una letra a buscar en esa frase. La
+	//función debe devolver la cantidad de veces que encontró la letra. Nota: recordar el uso de la
+	//	función Subcadena().
+	
+	definir frase , letra  como caracter
+	
+	escribir "Ingresa una frase para tener donde buscar"
+	leer frase 
+	
+	escribir "Ingresa una letra que quieras buscar"
+	leer letra
+	
+	escribir hh( frase , letra )
+	
+FinAlgoritmo
+
+
+Funcion sfgasdfawsedf <- hh( frase , letra )
+	
+	definir i , cont como entero 
+	definir aux como caracter
+	
+	cont = 0 
+	
+	Para i <- 0 Hasta longitud(frase) -1 Con Paso 1 Hacer
+		
+		aux = SubCadena(frase,i,i)
+		
+		si aux = letra Entonces
+			
+			cont = cont + 1
+			
+		FinSi
+		
+	Fin Para
+	
+	si cont = 1 Entonces
+		
+		escribir  " La letra " letra " aparece " cont " vez.  "
+		
+	sino 
+		
+		escribir  " La letra " letra " se repite " cont " veces.  "
+		
+	FinSi
+	
+Fin Funcion
+

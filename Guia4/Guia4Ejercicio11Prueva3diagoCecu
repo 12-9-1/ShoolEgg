@@ -1,0 +1,57 @@
+//11. Rellenar en un subproceso una matriz cuadrada con números aleatorios salvo en la diagonal
+//	principal, la cual debe rellenarse con ceros. Una vez llena la matriz debe generar otro
+//	subproceso para imprimir la matriz.
+
+Algoritmo Ejer11x2
+	
+	Definir matriz, n Como Entero
+	
+	Escribir "Ingrese el valor de la matriz cuadrada"
+	leer n
+	
+	Dimension matriz[n,n]
+	
+	llenar(matriz,n)
+	
+	impri(matriz,n)
+	
+FinAlgoritmo
+
+SubProceso llenar(matriz Por Referencia,n)
+	Definir i, j Como Entero
+	
+	para i <- 0 Hasta n-1 Hacer
+		
+		para j <- 0 Hasta n-1 Hacer
+			
+			si (i+j) = n-1 Entonces
+				matriz[i,j] = 0
+			SiNo
+				matriz[i,j] = Aleatorio(1,9)
+			FinSi
+			
+		FinPara
+		
+	FinPara
+	
+FinSubProceso
+
+SubProceso impri(matriz,n)
+	Definir i,j Como Entero
+	
+	para i <- 0 Hasta n-1 Hacer
+		
+		para j <- 0 Hasta n-1 Hacer
+			
+			si j = n-1 Entonces
+				Escribir matriz[i,j]
+			SiNo
+				Escribir matriz[i,j] ", " Sin Saltar
+			FinSi
+			
+		FinPara
+		
+	FinPara
+	
+FinSubProceso
+	

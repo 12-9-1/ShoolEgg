@@ -1,0 +1,23 @@
+//5. Escribir un programa que calcule cuántos dígitos tiene un número entero positivo sin
+//convertirlo a cadena (pista: se puede hacer dividiendo varias veces entre 10). Nota:
+//		investigar la función trunc().
+
+Algoritmo EjerExtr5prueba
+	
+	Definir num, auxi,cont Como entero
+	
+	Escribir "Ingrese un número"
+	leer num
+	cont = 0
+	
+	mientras num > 0 Hacer
+		
+		num = trunc(num/10)
+		
+		cont = cont + 1
+		
+	FinMientras
+	
+	Escribir "Tiene " cont " digitos"
+	
+FinAlgoritmo

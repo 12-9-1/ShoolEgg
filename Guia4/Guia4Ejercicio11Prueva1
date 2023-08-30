@@ -1,0 +1,37 @@
+//Rellenar en un subproceso una matriz cuadrada con números aleatorios salvo en la diagonal
+//principal, la cual debe rellenarse con ceros. Una vez llena la matriz debe generar otro
+//subproceso para imprimir la matriz.
+
+Algoritmo eje_11
+	Definir matriz,f,c,n como entero
+	
+	f=0
+	c=0
+	Escribir "Ingresar el tamaño de la matriz"
+	leer n
+	Dimension matriz(n,n)
+	llenarmatriz(matriz,f,c,n)
+	mostrarlo(matriz,f,c,n)
+FinAlgoritmo
+
+SubProceso llenarmatriz(matriz,f,c,n)
+	para f=0 hasta n-1 Hacer
+		para c=0 hasta n-1 Hacer
+			si f=c Entonces
+				matriz(f,c)=0
+			SiNo
+				matriz(f,c)=Aleatorio(1,9)
+		FinSi
+		FinPara
+	FinPara
+FinSubProceso
+
+SubProceso mostrarlo(matriz,f,c,n)
+	para f=0 hasta n-1 Hacer
+		para c=0 hasta n-1 Hacer
+		Escribir Sin Saltar matriz(f,c)  " "
+	FinPara
+	Escribir ""
+	FinPara
+FinSubProceso
+	

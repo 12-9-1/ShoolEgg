@@ -1,0 +1,31 @@
+//Recursión
+//
+//10. Escribir una función recursiva que devuelva la suma de los primeros N enteros.
+
+Funcion r <- suma(n)
+	Definir r, ant Como Entero
+	
+	si n = 1 Entonces
+		
+		r = 1
+		
+	SiNo
+		
+		ant = suma(n-1)
+		
+		r = n + ant
+		
+	FinSi
+	
+FinFuncion
+
+Algoritmo Ejer10
+	
+	Definir n Como Entero
+	
+	Escribir "Ingrese la cantidad de N primeros enteros que quiere sumar"
+	leer n
+	
+	Escribir suma(n)
+	
+FinAlgoritmo

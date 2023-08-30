@@ -1,0 +1,36 @@
+//Realizar un programa que rellene un vector de tamaño N, con valores ingresados por el
+//usuario. A continuación, se debe buscar un elemento dentro del arreglo (el número a buscar
+//también debe ser ingresado por el usuario). El programa debe indicar la posición donde se
+//encuentra el valor. En caso que el número se encuentre repetido dentro del arreglo se deben
+//imprimir todas las posiciones donde se encuentra ese valor.
+//Finalmente, en caso que el número a buscar no está adentro del arreglo se debe mostrar un
+//mensaje.
+
+Algoritmo ejercicio3
+	
+	definir n,vector,i,num Como entero
+	definir posicion Como Logico
+	escribir" por favor ingrese la cantidad de numeros que desea ingresar"
+	leer n
+	escribir "ingresar ",n ," numeros"
+	dimension vector(n)
+	
+	para i<-0 hasta n-1 Hacer
+		leer vector(i)
+	FinPara
+	
+	escribir "ingrese el valor a buscar"
+	leer num
+	posicion=falso
+	para i<-0 Hasta n-1 hacer
+		si num=vector(i) Entonces
+			posicion=Verdadero
+			escribir "la posicion en donde se encuentra ",num " es: ", i+1
+		FinSi
+	FinPara
+	
+	si posicion=falso Entonces
+		escribir "el número a buscar no está adentro del arreglo"
+	FinSi
+	
+FinAlgoritmo

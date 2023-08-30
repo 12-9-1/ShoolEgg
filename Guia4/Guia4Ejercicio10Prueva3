@@ -1,0 +1,52 @@
+
+Subproceso ramiro( n  , m , num por referencia )
+	definir aleatorios  , i , f como real
+	
+	Para i<-0 Hasta n - 1 Con Paso 1 Hacer
+		
+		Para f<-0 Hasta m - 1 Con paso 1 Hacer
+			
+			num(i , f) = aleatorio( 1 , 10)
+			escribir "( " i ", " f ")" " = " num(i , f) 
+			
+		Fin Para
+	Fin Para
+Fin subproceso
+
+Funcion sumita <- pipe( n  , m , num por referencia )
+	
+	definir i , f , suma , sumita  como real
+	suma = 0
+	
+	Para i<-0 Hasta n - 1 Con Paso 1 Hacer
+		
+		Para f<-0 Hasta m - 1 Con paso 1 Hacer
+			
+			suma = num(i , f) + suma
+			
+		Fin Para
+	Fin Para
+	sumita = suma 
+Fin Funcion
+
+Algoritmo manuel
+	
+//	Dada una matriz de orden n * m (donde n y m son valores ingresados por el usuario) realizar
+//	un subprograma que llene la matriz de numeros aleatorios. Despues, crearemos otro
+//	subprograma que calcule y muestre la suma de los elementos de la matriz. Mostrar la matriz y
+	//	los resultados por pantalla.
+	
+	
+	definir n , m , num , suma , i , f , sumita como real
+	
+	
+	escribir "Ingrese " "n" " y m."
+	leer n , m
+	
+	dimension num(n,m)
+	
+	ramiro( n  , m , num )
+	esperar 2 Segundos
+	escribir  "La suma de todos los valores es: " pipe( n  , m , num )
+	
+FinAlgoritmo

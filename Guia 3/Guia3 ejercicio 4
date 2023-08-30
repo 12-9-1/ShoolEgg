@@ -1,0 +1,29 @@
+Algoritmo ejercicio4
+////	Realizar un programa que pida al usuario una frase y una letra a buscar en esa frase. La
+////    función debe devolver la cantidad de veces que encontró la letra. Nota: recordar el uso de la
+////	función Subcadena().
+	
+	Definir frase, letra Como Caracter
+	Definir resul Como Entero
+	Escribir "ingrese una frase"
+	Leer frase
+	Escribir "ingrese una letra"
+	leer letra
+	resul=cantLetras(frase, letra)
+	Escribir "la letra ", letra " se encuentra ", resul " vez en la palabra ", frase
+	
+	
+FinAlgoritmo
+
+Funcion resulLetras <- cantLetras ( frase, letra )
+	Definir resulLetras, contador, cant, aux Como Entero
+	
+	cant=Longitud(frase)
+	contador=0
+	Para aux=0 Hasta cant
+		si Subcadena(frase, aux, aux) = letra
+			contador= contador + 1
+		FinSi
+	FinPara
+	resulLetras = contador
+Fin Funcion

@@ -1,0 +1,27 @@
+//16. Implemente de forma recursiva una función que le dé la vuelta a una cadena de caracteres.
+//NOTA: Si la cadena es un palíndromo, la cadena y su inversa coincidirán.
+
+Funcion r <- invertida(cade)
+	Definir r, letra, ant, acu Como Caracter
+	Definir long,i Como Entero
+	acu=""
+	long = Longitud(cade)-1
+	Escribir long
+	
+	para i <- long Hasta 0 con paso -1 Hacer
+		
+		letra = SubCadena(cade,i,i)
+		acu = acu + letra
+	FinPara
+	
+	r = acu
+	
+FinFuncion
+
+Algoritmo EjerExtra16practica
+	Definir cade Como Caracter
+	Escribir "Ingrese una cadena de caracteres"
+	leer cade
+	
+	Escribir invertida(cade)
+FinAlgoritmo

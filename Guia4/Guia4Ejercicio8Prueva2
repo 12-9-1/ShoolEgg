@@ -1,0 +1,39 @@
+//Arreglos: Matrices
+//	
+//	8. Realizar un programa que rellene una matriz de 3x3 con 9 valores ingresados por el usuario y
+//	los muestre por pantalla.
+
+Algoritmo Ejer8x
+	
+	Definir matriz, i, j, n Como Entero
+	
+	Dimension matriz[3,3]
+	
+	Escribir "Ingrese los elementos de la matriz"
+	
+	para i<- 0 Hasta 2 Hacer
+		
+		para j <- 0 Hasta 2 Hacer
+			
+			leer n
+			matriz[i,j] = n
+			
+		FinPara
+		
+	FinPara
+	
+	para i<- 0 Hasta 2 Hacer
+		
+		para j <- 0 Hasta 2 Hacer
+			
+			si j = 2 Entonces
+				Escribir matriz[i,j]
+			SiNo
+				Escribir matriz[i,j] ", " Sin Saltar
+			FinSi
+			
+		FinPara
+		
+	FinPara
+	
+FinAlgoritmo

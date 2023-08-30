@@ -1,0 +1,21 @@
+
+//Realizar un programa que rellene una matriz de 3x3 con 9 valores ingresados por el usuario y
+//los muestre por pantalla.
+
+Algoritmo eje_8
+	Definir matrizA,f,c como entero
+	Dimension matrizA(3,3)
+	
+	Escribir "Rellene la matriz"
+	para f=0 hasta 2 Hacer
+		Para c=0 hasta 2 Hacer
+			leer matrizA(f,c)
+		FinPara
+	FinPara
+	para f=0 hasta 2 Hacer
+		Para c=0 hasta 2 Hacer
+			Escribir matrizA(f,c) Sin Saltar
+		FinPara
+		Escribir ""
+	FinPara
+FinAlgoritmo

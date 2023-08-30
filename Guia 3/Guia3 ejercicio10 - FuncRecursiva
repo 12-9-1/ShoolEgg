@@ -1,0 +1,17 @@
+Algoritmo FuncRecursiva
+	Definir num Como Entero
+	Escribir 'ingrese un numero'
+	Leer num
+	Escribir 'la suma de los primeros ',num,' es ',suma(num)
+FinAlgoritmo
+
+Funcion sumado = suma(n)
+	Definir sumado Como Entero
+	Si n=0 O n=1 Entonces
+		sumado <- n
+		// escribir sumado " " n
+	SiNo
+		sumado <- suma(n-1)+n
+		// escribir sumado " " n
+	FinSi
+FinFuncion

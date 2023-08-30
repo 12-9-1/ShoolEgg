@@ -1,0 +1,57 @@
+Algoritmo letrasDislexicas
+	
+//	//sRealizar un programa que pida una frase y el programa deberá mostrar la frase con un
+//espacio entre cada letra. La frase se mostrará así: H o l a. Nota: recordar el funcionamiento
+	//		de la función Subcadena().
+//NOTA:. En PseInt, si queremos escribir sin que haya saltos de línea, al final de la operación
+//	"escribir" escribimos "sin saltar". Por ejemplo:
+//		Escribir sin saltar "Hola, "
+//		Escribir sin saltar "cómo estás?"
+//	Imprimirá por pantalla: Hola, cómo estás?
+	
+	definir frase , frase1  , completa Como Caracter
+	definir r como caracter
+	
+	
+	DEFINIR i como entero 
+	
+	escribir "Dislexia?"
+	leer r 
+
+	
+	
+	si r = "S" o r = "s" Entonces
+		escribir "Ingrese una frase, esta sera dislexificada"
+		leer frase 
+		
+		Para i <- longitud(frase) - 1  Hasta 0 Con Paso - 1 Hacer
+			
+			frase1 =  subcadena(frase,i, i)
+			escribir  frase1 "  " sin saltar 
+			
+		Fin Para
+		
+	sino 
+		si r = "N" o r = "n" 
+			escribir "Ingrese una frase, esta sera desmontada"
+			leer frase 
+			
+			Para i <- 0  Hasta longitud(frase) - 1 Con Paso  1 Hacer
+				
+				frase1 =  subcadena(frase,i, i)
+				escribir  frase1 "  " sin saltar 
+				
+			Fin Para
+			
+		fin si 
+		
+	FinSi
+
+	
+	
+
+	
+	escribir "    " 
+	
+	
+FinAlgoritmo

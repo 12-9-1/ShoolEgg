@@ -1,0 +1,28 @@
+//17. Realice nuevamente un programa que calcule la función de Fibonacci, pero esta vez de
+//manera recursiva.
+
+Funcion r <- fibonacci(n)
+	Definir r  Como Real
+
+	si n = 0  Entonces
+		r = 0
+	SiNo
+		si n = 1 Entonces
+			r = 1
+		SiNo
+			r = fibonacci(n-1) + fibonacci(n-2)
+		FinSi
+	FinSi
+	
+FinFuncion
+
+Algoritmo EjerExtra17
+	
+	Definir n Como real
+	
+	Escribir "Ingrese el termino n de sucesion fibonacci que quiere ver"
+	leer n
+	
+	Escribir "El termino " n " de fibonacci es: " fibonacci(n)
+	
+FinAlgoritmo

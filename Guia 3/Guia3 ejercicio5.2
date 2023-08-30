@@ -1,0 +1,50 @@
+
+Algoritmo FuncionnHallarPrimitos
+	
+//	Realizar una función que reciba un numero ingresado por el usuario y averigüe si el número es
+//	primo o no. Un número es primo cuando es divisible sólo por 1 y por sí mismo, por ejemplo: 2,
+//	3, 5, 7, 11, 13, 17, etc. Nota: recordar el uso del MOD.
+//	definir num1 , num2 , suma como real 
+	
+	definir num Como Real
+	
+	escribir "Ingrese un numero, si es de la familia lo diremos"
+	leer num
+	
+	escribir pepito( num )
+	
+	///dividir desde 1 hasta el mismo numero 
+	
+	
+	finalgoritmo
+
+
+	Funcion primitas <- pepito( num )
+		
+		definir cont , i , juan como entero 
+		
+		cont = 0
+		
+		mientras num < 0 Hacer
+			
+			escribir "Eu negatividad fuera"
+			leer num 
+			
+		FinMientras
+		
+		Para i <- 1  Hasta num Con Paso  1 Hacer
+			
+			juan = num mod i
+			
+			si juan = 0  Entonces
+				
+				cont = cont + 1
+				
+			FinSi
+		Fin Para
+		si cont = 2 entonces 
+			Escribir " EL numero es Familia" 
+		SiNo
+			escribir "No hay herencia bb"
+		FinSi
+	Fin Funcion

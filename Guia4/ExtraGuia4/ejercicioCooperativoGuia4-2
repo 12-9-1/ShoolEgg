@@ -1,0 +1,87 @@
+
+SubProceso  iniciomatriz(tablero,f,c)
+	
+	Para f=0 Hasta 8 Con Paso 1 Hacer
+		Para c=0 Hasta 11 Con Paso 1 Hacer
+			tablero(f,c)="*"
+		Fin Para
+	Fin Para
+Fin Funcion
+
+SubProceso  imprimirMatriz(tablero,f,c)
+	
+	Para f=0 Hasta 8 Con Paso 1 Hacer
+		Para c=0 Hasta 11 Con Paso 1 Hacer
+			Escribir Sin Saltar tablero(f,c)
+		Fin Para
+		escribir  ""          ////completa otra fila en otra columna
+	Fin Para
+Fin Funcion
+
+////////Definir i,j,l  Como Entero
+////////Definir matriz, frase Como Caracter
+////////
+////////Dimension matriz(3,3)
+////////
+////////Escribir "Ingrese la frase"
+////////leer frase
+////////
+////////l = 0
+////////para i<-0 Hasta 2 Hacer
+////////	para j<-0 Hasta 2 Hacer
+////////		Matriz(i,j) = Subcadena(frase,i,i)
+////////		l = l + 1
+////////	FinPara
+////////FinPara
+
+SubProceso  agregarPalabra(tablero,f,palabra) 
+	Definir var Como caracter
+	Definir i,j, long Como Entero
+	long=longitud(palabra)
+	Para i=0 Hasta 8 Con Paso 1 Hacer
+		Para j=0 Hasta 11 Con Paso 1 Hacer
+		var=subcadena(palabra,i,j)
+		si i=f-1 Entonces
+			tablero(i,j)=subcadena(palabra,i,i)
+		FinSi
+		Fin Para
+		escribir ""          ////completa otra fila en otra columna
+	Fin Para
+Fin Funcion
+
+////subprograma agregarPalabra:
+////	Se le debe indicar en los parámetros la matriz donde se va a agregar la palabra, la fila en la
+////	que se agregará y la propia palabra. Una vez el subprograma reciba eso debe descomponer
+////	la palabra y agregarla a la matriz en la posición deseada.
+
+Algoritmo ejercicioCooperativoGuia4
+	Definir tablero,palabra como Cadena
+	Definir c,i,fila Como Entero
+	Dimension tablero[9, 12]
+	
+	iniciomatriz(tablero,9,12)
+	//imprimirMatriz(tablero,9,12)
+	
+	Escribir "Ingrese una palabra "
+	Leer palabra
+	Escribir "Ingrese la fila donde quiere colocarla"
+	Leer fila
+	agregarPalabra(tablero,fila,palabra) 
+	
+	imprimirMatriz(tablero,9,12)
+	
+	
+    
+	
+//	agregarPalabra(tablero, "vector", 0)
+//	agregarPalabra(tablero, "matrix", 1)
+//	agregarPalabra(tablero, "programa", 2)
+//	agregarPalabra(tablero, "subprograma", 3)
+//	agregarPalabra(tablero, "subproceso", 4)
+//	agregarPalabra(tablero, "variable", 5)
+//	agregarPalabra(tablero, "entero", 6)
+//	agregarPalabra(tablero, "para", 7)
+//	agregarPalabra(tablero, "mientras", 8)
+//	acomodarPalabras(tablero)
+//	imprimirMatriz(tablero, 9, 12)
+FinAlgoritmo

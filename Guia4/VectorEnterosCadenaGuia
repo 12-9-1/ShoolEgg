@@ -1,0 +1,28 @@
+//Define un vector que alojará números enteros y otro de cadena. Dimensiona ambos de la longitud
+//que tu desees. Ahora en lapiz y papel, escribe la dimensión de tus vectores y sus subíndices. 
+
+
+
+Algoritmo VectorEnterosCadena
+	Definir num, i, j Como Entero
+	Definir text Como Caracter
+	
+	Dimension num(5)
+	Dimension text(6)
+	
+	
+	
+	Para i=0 hasta 4 Hacer
+		Escribir "Digite número"
+		leer num(i)
+		
+	FinPara
+	
+	Para j=0 hasta 5
+		Escribir "Ingrese texto"
+		leer text(j)
+	FinPara
+	
+	
+	
+FinAlgoritmo
